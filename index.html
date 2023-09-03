@@ -1,1 +1,64 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanStudio</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+    <script src="vs.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div w3-include-html="header.html"></div>
+    </div>
+    
+    <div class="content">
+      <div class="section">
+      <h1>Welcome to</h1>
+      <div class="main-logo">
+      <img class="center" src="/vanstudio.svg" title="VanStudio" alt="VanStudio">
+      </div>
+      </div>
+      <div class="section-dark">
+        <h2>Product & Service</h2>
+        <div class="wrapper">
+        <div class="col1">
+          <div id="product"></div>
+          
+        </div>
+        <div class="col2">
+          <p>Sequence Diagram, a plugin for IntelliJ IDEA, is free download with freemium function, help you</p>
+          <ul>
+            <li>Generate simple sequence diagram of method.</li>
+            <li>Navigate the code by click the diagram shape.
+            <li>Export the diagram as image(SVG, JPEG, PNG, TIFF).
+            <li>Export the diagram as PlantUML, Mermaid format file.
+          </ul>
+          <div class="right">
+            <div id="install"></div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+    </div>
+    
+    <div class="footer"> Copyright &copy; 2016-2023 VanStudio 
+      <!--img width="100" title="neocities.org" src="/neocities.png"-->
+    </div>
+    <script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
+    <script>
+      includeHTML();
+
+      // Please, replace #yourelement with a real element id on your webpage
+      MarketplaceWidget.setupMarketplaceWidget('card', 8286, "#product");
+      
+      MarketplaceWidget.setupMarketplaceWidget('install', 8286, "#install");
+    </script>
+  </body>
+</html>

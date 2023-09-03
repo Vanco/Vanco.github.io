@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Note</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+    <script src="vs.js"></script>
+</head>
+<body>
+<div class="header">
+    <div w3-include-html="header.html"></div>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h1>What's New</h1>
+    </div>
+    <section>
+        <h2>SequenceDiagram 3.0.6</h2>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/alt-loop.svg" alt="Alt/Loop Fragment"/>
+            </div>
+            <div class="col2">
+                <h3>Alt/Loop fragment support(Beta)</h3>
+                <p>Add alt/loop fragment to support generate if-else, switch, for, while fragment box.</p>
+                <p>You need opt-in the checkbox in the settings before use it. e.g.</p>
+                <pre>
+    public void test0 () {
+        if (true) {
+            new Apple("Green");
+            System.out.println();
+        }
+    }
+                </pre>
+                <p>will generate sequence as the image.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1"></div>
+            <div class="col2">
+                <h3>Regular expression support in exclude settings</h3>
+                <p>When add exclude setting entry, you can use regex expression. e.g. </p>
+                <pre>
+    `.*Builder` to filter
+    `my.package.MyBuilder`,
+    `java.lang.StringBuilder`
+                </pre>
+                <p>Be more careful when using it, sometimes regular expressions can cause some trouble, and
+                    the result is not what you expected.
+                    When you encounter problems, please delete the settings in time and try again.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/method-ref.svg" alt="Method reference"/>
+            </div>
+            <div class="col2">
+                <h3>Method reference support</h3>
+                <p>Java method reference is supported. e.g.</p>
+                <pre>
+    public void testA() {
+        Arrays.asList("Hello", "World")
+                .stream()
+                .map(ClassA::getData);
+    }
+                </pre>
+                <p>the `ClassA::getData` method reference will generate in sequence like the image.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1">
+                <img width="219" src="images/lambda-before.png" alt="Lambda before"/>
+                <img src="images/test-lambda1.svg" alt="Lambda sub-sequence"/>
+            </div>
+            <div class="col2">
+                <h3>Draw Lambda expression as sub-sequence</h3>
+                <p>Lambda expression support changed, in previous version, lambda draw right after method, while as
+                    in this version lambda draw as sub-sequence. e.g.</p>
+                <pre>
+    public void testLambda() {
+        Stream.iterate(0, n -> n + 1);
+    }
+                </pre>
+                <p>Before(gray)  vs  after in the image.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="footer"> Copyright &copy; 2016-2023 VanStudio
+    <!--img width="100" title="neocities.org" src="/neocities.png"-->
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

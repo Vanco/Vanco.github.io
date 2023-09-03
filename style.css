@@ -1,0 +1,224 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+html {
+  font-size: 1em; 
+}
+
+body {
+  background-color: white;
+  color: black;
+  font: 1.2em Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1em 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.header {
+  min-height: 80px;
+}
+
+.menu {
+  display: none;
+  background-color: #f3f3f3;
+}
+
+ul.menu-item {
+  max-width: 1440px;
+  margin: 0 auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+ul.menu-item li {
+}
+
+ul.menu-item li a {
+  display: inline-block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.menu-item li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+ul.menu-item a.active {
+  background-color: #0066ff;
+  color: white;
+}
+
+.menu-mobile {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.menu-mobile #myLinks {
+  display: none;
+}
+
+.menu-mobile a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.menu-mobile a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu-mobile a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.menu-mobile a.active {
+  background-color: #0066ff;
+  color: white;
+}
+
+.footer {
+  height: 200px;
+  background-color: #212178;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.center {
+  display: block;
+  margin: auto;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  min-height: 700px;
+}
+
+.main-logo {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+
+.section {
+  background-color: #ffffff;
+  color: #555;
+}
+
+.section-dark {
+  background-color: #0066ff;
+  color: white;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapper2 {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.col1 {
+   margin: 1em auto;
+}
+
+.col2 {
+  text-align: left;
+  padding: 0 1em;
+}
+
+.feature-box {
+    min-height: 700px;
+    padding-bottom: 1em;
+}
+
+.round-box {
+    background: white;
+    min-height: 319px;
+    width: 80%;
+    color: #555;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+#install {
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1em;
+  } 
+
+  .wrapper2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1em;
+   }
+
+   .round-box {
+       background: white;
+       min-height: 500px;
+       min-width: 90%;
+       color: #555;
+       border-radius: 10px;
+       margin: 0 auto;
+   }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  ul.menu-item li {
+    float: left;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menu-mobile {
+     display: none;
+  }
+}
