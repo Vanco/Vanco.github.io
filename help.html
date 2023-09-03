@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documentation</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
-    <script src="vs.js"></script>
 </head>
 <body>
 <div class="header">
@@ -16,9 +15,174 @@
 
 <div class="content">
     <div class="section">
-        <h1>Getting Started</h1>
+        <h1>Documentation</h1>
     </div>
     <section>
+        <h2>1. Getting Started</h2>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/install.png" alt="Install"/>
+            </div>
+            <div class="col2">
+                <h3>1.1 Installation</h3>
+                <p>The SequenceDiagram is a plugin, you can install from the marketplace:  </p>
+                <ul>
+                    <li>goto `Settings > plugins` </li>
+                    <li>and search `SequenceDiagram` will find it,</li>
+                    <li>then click install button.</li>
+                </ul>
+                <p>Or you install here:</p>
+                <div class="right">
+                    <div id="install"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="col1">
+
+            </div>
+            <div class="col2">
+                <h3>1.2 Quick Access</h3>
+                <p>When installed. You can quickly access it with shortcut-keys: </p>
+                <ul>
+                    <li>Open `JAVA`, `kotlin`, `Scala` file</li>
+                    <li>Generate sequence diagram with shortcut `Alt S` for windows, `Option S` for macOS.</li>
+                </ul>
+                <p><i class="fa fa-bullhorn" aria-hidden="true" /></i>  Tips:</p>
+                <ul>
+                    <li>Place caret at name of method will fastest, generate diagram for the method.</li>
+                    <li>Place caret at class name, will pop up list to choose which method to be generated. </li>
+                    <li>Place caret at anywhere in the source file, will pop up choose list too.</li>
+                    <li>Place caret at files other than `JAVA`, `kotlin`, `Scala`, will raise info window say `Unsupported source file.`</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/nav-tips.svg" alt="Navigation code">
+            </div>
+            <div class="col2">
+                <h3>1.3 Code navigation</h3>
+                <p>Code navigation is powerful function of SequenceDiagram plugin. When you generated a diagram
+                    for the method, you can double-click the shape in the diagram to jump to the code:</p>
+                <ul>
+                    <li>Double-click the call link name, will jump to the code call the method.</li>
+                    <li>Double-click the method bar, will jump to the method definition.</li>
+                    <li>Double-click the class name will open the class. </li>
+                </ul>
+                <p>Or, you can navigate to code by choose context menu `Go to Source`.</p>
+                <p><i class="fa fa-bullhorn" aria-hidden="true" /></i>  Tips:</p>
+                <ul>
+                    <li>Double-click implementation dummy call, or double-click its method bar, will jump to
+                        the same place: the definition of implemented method.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>2. Advanced Usage</h2>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/generate-setting.png" alt="generate setting">
+            </div>
+            <div class="col2">
+                <h3>2.1 Generate Settings</h3>
+                <p>You can make some options before you generate. </p>
+                <ul>
+                    <li>Open Sequence Diagram tool window in idea.</li>
+                    <li>Click`<i class="fa fa-gear" aria-hidden="true" /></i>`to open `Sequence diagram options` windows,</li>
+                    <li>then make some choice.</li>
+                </ul>
+                <p><i class="fa fa-bullhorn" aria-hidden="true" /></i>  Tips:</p>
+                <ul>
+                    <li>Uncheck the `Display only project classes` option, will fast the generation process，
+                        because classes outside the project will trigger the decompile process.</li>
+                    <li>Click`<i class="fa fa-gear" aria-hidden="true" /></i>` in the bottom of `Sequence diagram options` windows,
+                        will open system settings of SequenceDiagram, more setting can be set there.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/sys-setting.png" alt="system setting">
+            </div>
+            <div class="col2">
+                <h3>2.2 System Settings</h3>
+                <p>SequenceDiagram plugin has more setting place in Idea's system settings. You can customize color of shape, font,
+                and some useful options.</p>
+                <ul>
+                    <li>Open Idea's `Settings...`</li>
+                    <li>Navigate to `Tools` > `SequenceDiagram` in side tree to open the system settings for SequenceDiagram.</li>
+                </ul>
+                <p><i class="fa fa-bullhorn" aria-hidden="true" /></i>  Tips:</p>
+                <ul>
+                    <li>`Object overlay color mapping` setting are useful, when you need tag some class you concern.
+                        It will show additional color dot overlay on the class shape.</li>
+                    <li>`Exclude from diagram` setting are more powerful, when you need exclude some class from generate
+                        process. </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/remove-action.png" alt="Remove shape">
+            </div>
+            <div class="col2">
+                <h3>2.3 Remove shape</h3>
+                <p>After the sequence diagram generated. You can still customize the diagram by remove shapes,
+                which will make diagram more clean as you wish. The `Remove ***` action are locate in the context menu:</p>
+                <ul>
+                    <li>Right click class shape, `Remove class 'ClassA'`, will remove class from diagram. </li>
+                    <li>Right click method bar, `Remove Method 'methodA()'`, will remove the method and it's subsequence.</li>
+                    <li>Right click call link same as method bar.</li>
+                </ul>
+                <p><i class="fa fa-bullhorn" aria-hidden="true" /></i>  Tips:</p>
+                <ul>
+                    <li>How to reverse removed shape? you can use `Filter manager` to manage all the removed actions.
+                        You can reverse single remove action, clear all removed actions. </li>
+                    <li>The remove action will not change the source code, it only removes shape from diagram.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/filter-manager.png" alt="Filter manager">
+            </div>
+            <div class="col2">
+                <h3>2.4 Filter Manager</h3>
+                <p>Filter manager is tool useful when you remove shape from diagram, and you regret the deletion.</p>
+                <ul>
+                    <li>Click the `<i class="fa fa-filter" aria-hidden="true" /></i>` toolwindow icon to open `Filter Manager` window.</li>
+                    <li>Disable/Enable the filter(remove method or class).</li>
+                    <li>Click `Clear All` to clean all filters.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1">
+                <img src="images/export-menu.png" alt="Export Diagram">
+            </div>
+            <div class="col2">
+                <h3>2.5 Export Diagram</h3>
+                <p>SequenceDiagram plugin support export diagram as image file, SVG, PNG, JPG, TIFF or as plantUML, Mermaid file.</p>
+                <ul>
+                    <li>Click `<i class="fa fa-download" aria-hidden="true" /></i>` toolwindow icon to show export menu</li>
+                    <li>Choose export menu, a file name dialog windows will ask the export file name and location.</li>
+                    <li>Click `OK` confirm the export.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1"></div>
+            <div class="col2"></div>
+        </div>
+        <div class="wrapper">
+            <div class="col1"></div>
+            <div class="col2"></div>
+        </div>
+
 
     </section>
 </div>
@@ -26,8 +190,13 @@
 <div class="footer"> Copyright &copy; 2016-2023 VanStudio
     <!--img width="100" title="neocities.org" src="/neocities.png"-->
 </div>
+<script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
+<script src="vs.js"></script>
 <script>
     includeHTML();
+
+    MarketplaceWidget.setupMarketplaceWidget('install', 8286, "#install");
+
 </script>
 </body>
 </html>
