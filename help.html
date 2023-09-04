@@ -175,8 +175,40 @@
             </div>
         </div>
         <div class="wrapper">
-            <div class="col1"></div>
-            <div class="col2"></div>
+            <div class="col1">
+                <img src="images/expend.png" alt="Expend Implementation">
+                <img src="images/expend-pop.png" alt="Expend popup">
+            </div>
+            <div class="col2">
+                <h3>2.6 Expend Implementation</h3>
+                <p>Scenario: interface `IA` with many implementations `ClassA`, `ClassB`, `ClassC`. </p>
+                <pre>
+    interface IA {
+        void methodA();
+    }
+                </pre>
+                <p>when generate sequence diagram for the method `main`,</p>
+                <pre>
+    public void main(IA a) {
+        a.methodA();
+    }
+                </pre>
+                <p>Right-click on the method bar of `methodA`, will show a menu `Expend...`, click it, pop up
+                    a list of implementations for you, choose one of them to show in the diagram.</p>
+                <p><i class="fa fa-bullhorn" aria-hidden="true" /></i>  Tips:</p>
+                <ul>
+                    <li>the expend function only work for those interface, `Smart Interface` fail to find correct
+                    implementation. e.g. when generate sequence diagram for the method `main2`:<pre>
+    public void main2() {
+        IA a = new ClassA();
+        a.methodA();
+    }
+                        </pre>the `Smart Interface` will find `ClassA` as an implementation for interface `IA`.
+                        Only ClassA will draw in the diagram, even you `Expend...` and choose a different
+                        implementation, ClassB or ClassC.</li>
+                    <li>Some time you can disable the `Smart Interface` in settings, when you need choose implementation by hand.</li>
+                </ul>
+            </div>
         </div>
         <div class="wrapper">
             <div class="col1"></div>
