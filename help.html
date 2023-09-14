@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="vs.appcache">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -273,6 +273,21 @@
 
     MarketplaceWidget.setupMarketplaceWidget('install', 8286, "#install");
 
+    // Check if a new cache is available on page load.
+    window.addEventListener('load', function(e) {
+
+        window.applicationCache.addEventListener('updateready', function(e) {
+            if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                // Browser downloaded a new app cache.
+                if (confirm('A new version of this site is available. Load it?')) {
+                window.location.reload();
+                }
+            } else {
+                // Manifest didn't change. Nothing new to server.
+            }
+        }, false);
+
+    }, false);
 </script>
 </body>
 </html>
