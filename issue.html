@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" manifest="vs.mf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Known Issue</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="header">
+    <header>
+        <div class="menu-mobile">
+            <a href="index.html">Home</a>
+            <div id="myLinks">
+                <a href="feature.html">Features</a>
+                <a href="help.html">Documentation</a>
+                <a href="note.html">What's New</a>
+                <a href="issue.html" class="active">Known Issue</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="menu-item">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Features</a></li>
+                <li><a href="help.html">Documentation</a></li>
+                <li><a href="note.html">What's New</a></li>
+                <li><a class="active" href="issue.html">Known Issue</a></li>
+            </ul>
+        </div>
+    </header>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h1>Known Issue</h1>
+    </div>
+    <section>
+        <h2 class="warning">
+            Note: The SequenceDiagram plugin relies heavily on the UAST API.
+            Due to UAST API limitations, the following features are not supported.
+        </h2>
+        <div class="wrapper">
+            <div class="col1"></div>
+            <div class="col2">
+                <h3>1. Scala for comprehension calls is not supported</h3>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1"><img src="images/a_foo2.svg" alt="Comprehension"/></div>
+            <div class="col2">
+                <p>For example:</p>
+                <pre>
+class B() {
+  def bar() = Option("bar")
+}
+
+class A(b: B) {
+  def foo() = {
+    val r = "foo" + b.bar().getOrElse("?")
+    r
+  }
+
+  def foo2() = {
+    val r = for {
+      x <- b.bar()
+    } yield "foo" + x
+    r.getOrElse("?")
+  }
+}
+                </pre>
+                <p>the for comprehension call</p>
+                <pre>
+    val r = for {
+      x <- b.bar()
+    } yield "foo" + x
+                </pre>
+                <p>it's UAST tree is `UastEmptyexpression`</p>
+                <pre>
+UMethod (name = foo2)
+            UBlockExpression
+                UDeclarationsExpression
+                    ULocalVariable (name = r)
+                        UastEmptyExpression(type = PsiType:Option&lt;String>)
+                UReturnExpression
+                    UQualifiedReferenceExpression
+                        USimpleNameReferenceExpression (identifier = r)
+                        UMethodCall(name = getOrElse)
+                            UIdentifier (Identifier (getOrElse))
+                            ULiteralExpression (value = "?")
+                </pre>
+                <p>so the `b.bar()` method call will not generate base on `UastEmptyexpression`.
+                Hopefully, the UAST api will solve this problem sooner.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1"></div>
+            <div class="col2">
+                <h3>2. Groovy method body is not supported</h3>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="col1"><img src="images/student_greet.svg" alt="Comprehension"/></div>
+            <div class="col2">
+                <p>For example:</p>
+                <pre>
+/**
+ * A Class description
+ */
+class Student {
+    /** the name of the person */
+    String name
+
+    /**
+     * Creates a greeting method for a certain person.
+     *
+     * @param otherPerson the person to greet
+     * @return a greeting message
+     */
+    //known issue: groovy method will not generate in UAST
+    String greet(String otherPerson) {
+        "Hello ${otherPerson}"
+        // call java
+        Fruit fruit = new Banana()
+        fruit.eat()
+
+    }
+}
+                </pre>
+                <p>Based on UAST api limitation, it's UAST tree is no method body mappings.</p>
+                <pre>
+UFile (package = van.demo.grovvy)
+    UClass (name = Student)
+        UMethod (name = greet)
+            UParameter (name = otherPerson)
+                </pre>
+                <p>When generate sequence of method `greet`, the calls in the method body will not generate (the call java code in the body of `greet`).</p>
+                <pre>
+        "Hello ${otherPerson}"
+        // call java
+        Fruit fruit = new Banana()
+        fruit.eat()
+                </pre>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="vs.js"></script>
+<script>
+    includeHTML();
+    // Check if a new cache is available on page load.
+    window.addEventListener('load', function(e) {
+
+        window.applicationCache.addEventListener('updateready', function(e) {
+            if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                // Browser downloaded a new app cache.
+                if (confirm('A new version of this site is available. Load it?')) {
+                window.location.reload();
+                }
+            } else {
+                // Manifest didn't change. Nothing new to server.
+            }
+        }, false);
+
+    }, false);
+</script>
+</body>
+</html>

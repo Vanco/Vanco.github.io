@@ -10,7 +10,29 @@
 </head>
 <body>
 <div class="header">
-    <div w3-include-html="header.html"></div>
+    <header>
+        <div class="menu-mobile">
+            <a href="index.html">Home</a>
+            <div id="myLinks">
+                <a href="feature.html">Features</a>
+                <a href="help.html" class="active">Documentation</a>
+                <a href="note.html">What's New</a>
+                <a href="issue.html">Known Issue</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="menu-item">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Features</a></li>
+                <li><a class="active" href="help.html">Documentation</a></li>
+                <li><a href="note.html">What's New</a></li>
+                <li><a href="issue.html">Known Issue</a></li>
+            </ul>
+        </div>
+    </header>
 </div>
 
 <div class="content">

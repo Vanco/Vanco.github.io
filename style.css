@@ -221,4 +221,13 @@ ul.menu-item a.active {
   .menu-mobile {
      display: none;
   }
+
+  pre {
+     padding: 5px;
+     background-color: #efefef;
+  }
+
+  .warning {
+     color: red;
+  }
 }
