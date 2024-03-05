@@ -1,3 +1,6 @@
-/.idea
-/demo/
+.idea
+vanco.github.io.iml
+.DS_Store
+**/.DS_Store
+.git
 
