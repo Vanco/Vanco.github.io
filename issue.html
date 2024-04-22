@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="vs.mf">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,8 +41,8 @@
     </div>
     <section>
         <h2 class="warning">
-            Note: The SequenceDiagram plugin relies heavily on the UAST API.
-            Due to UAST API limitations, the following features are not supported.
+            <p>Note: The SequenceDiagram plugin relies heavily on the UAST API.
+            Due to UAST API limitations, the following features are not supported.</p>
         </h2>
         <div class="wrapper">
             <div class="col1"></div>
@@ -153,23 +153,6 @@ UFile (package = van.demo.grovvy)
     <!--img width="100" title="neocities.org" src="/neocities.png"-->
 </div>
 <script src="vs.js"></script>
-<script>
-    includeHTML();
-    // Check if a new cache is available on page load.
-    window.addEventListener('load', function(e) {
 
-        window.applicationCache.addEventListener('updateready', function(e) {
-            if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-                // Browser downloaded a new app cache.
-                if (confirm('A new version of this site is available. Load it?')) {
-                window.location.reload();
-                }
-            } else {
-                // Manifest didn't change. Nothing new to server.
-            }
-        }, false);
-
-    }, false);
-</script>
 </body>
 </html>

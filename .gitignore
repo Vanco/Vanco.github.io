@@ -1,6 +1,7 @@
-.idea
+.idea/
 vanco.github.io.iml
 .DS_Store
 **/.DS_Store
-.git
+.DS_Store?
+.git/
 
