@@ -184,6 +184,21 @@ ul.menu-item a.active {
   margin: 1em auto;
 }
 
+pre {
+    padding: 5px;
+    background-color: #efefef;
+}
+
+.warning {
+    color: red;
+}
+
+.box {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 70%;
+}
+
 @media screen and (min-width: 600px) {
   .wrapper {
     display: grid;
@@ -222,12 +237,5 @@ ul.menu-item a.active {
      display: none;
   }
 
-  pre {
-     padding: 5px;
-     background-color: #efefef;
-  }
 
-  .warning {
-     color: red;
-  }
 }
