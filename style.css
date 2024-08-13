@@ -190,6 +190,7 @@ pre {
 }
 
 .tip-box {
+    text-align: left;
     margin-top: 16px;
     margin-bottom: 16px;
     padding: 0.01em 16px;

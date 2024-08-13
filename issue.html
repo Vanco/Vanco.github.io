@@ -44,6 +44,11 @@
             <p><strong>Note:</strong> The SequenceDiagram plugin relies heavily on the UAST API.
                 Due to UAST API limitations, the following features are not supported.</p>
         </div>
+        <div class="warning box tip-box">
+            <p><strong>Note:</strong> The SequenceDiagram plugin use `apache bakit` to transcode SVG --> JPG, PNG, TIF.
+                When your diagram is huge, the transcoder might fail with OutOfMemoryError. To avoid this problem,
+                please increase the java memory setting, or prefer SVG format for export. </p>
+        </div>
         <div class="wrapper">
             <div class="col1"></div>
             <div class="col2">
