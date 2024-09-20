@@ -45,6 +45,13 @@
       <img class="center" src="/vanstudio.svg" title="VanStudio" alt="VanStudio">
       </div>
       </div>
+      <div class="section">
+          <h2>Modular Structure</h2>
+          <img src="images/sd-modular.svg" alt="Module">
+          <div class="info box tip-box">
+              <p>SequenceDiagram evolved into a multi-module architecture. It consists of a core module and several language modules. Each module is an IntelliJ Platform plugin, and they can be freely combined to work together.</p>
+          </div>
+      </div>
       <div class="section-dark">
         <h2>Product & Service</h2>
         <div class="wrapper">
@@ -81,7 +88,7 @@
             <li>(optional) org.jetbrains.kotlin – this is required for Kotlin</li>
             <li>(optional) org.intellij.scala – this is required for Scala</li>
             <li>(optional) org.intellij.groovy – this is required for Groovy</li>
-            <li>(optional) com.intellij.java - this is required for Java</li>
+            <li>(optional) com.intellij.java – this is required for Java</li>
           </ul>
           <div class="right">
 <!--            <div id="install"></div>-->
@@ -101,8 +108,28 @@
           <p>SequenceDiagram JS, support JavaScript, TypeScript language, if the following dependency satisfied: </p>
           <ul>
             <li>SequenceDiagram Core</li>
-            <li>(optional) JavaScript</li>
-            <li>(optional) JavaScriptBase</li>
+            <li>(optional) JavaScript – this is required for JavaScript and TypeScript.</li>
+          </ul>
+          <div class="right">
+            <p>This is a paid plugin.</p>
+<!--            <div id="install"></div>-->
+          </div>
+        </div>
+
+      </div>
+      </div>
+        <div class="section">
+<!--        <h2>Language Modules</h2>-->
+        <div class="wrapper">
+        <div class="col1">
+          <div id="rust"></div>
+
+        </div>
+        <div class="col2">
+          <p>SequenceDiagram Rust, support Rust language, if the following dependency satisfied: </p>
+          <ul>
+            <li>SequenceDiagram Core</li>
+            <li>(optional) com.jetbrains.rust – this is required for Rust.</li>
           </ul>
           <div class="right">
             <p>This is a paid plugin.</p>
@@ -125,6 +152,7 @@
       MarketplaceWidget.setupMarketplaceWidget('card', 8286, "#core");
       MarketplaceWidget.setupMarketplaceWidget('card', 24948, "#java");
       MarketplaceWidget.setupMarketplaceWidget('card', 24973, "#js");
+      MarketplaceWidget.setupMarketplaceWidget('card', 25376, "#rust");
 
       MarketplaceWidget.setupMarketplaceWidget('install', 8286, "#install");
 
