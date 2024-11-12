@@ -2,11 +2,15 @@
 <!-- Created with Pixodesk SVG (https://pixodesk.com) -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 117" text-rendering="geometricPrecision" shape-rendering="geometricPrecision">
   <defs>
-    <linearGradient id="23695" x1="7.0459" y1="25.6564" x2="115.637" y2="104.4118" gradientUnits="userSpaceOnUse">
+    <linearGradient id="23751" x1="7.0459" y1="25.6564" x2="115.637" y2="104.4118" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="rgb(0,102,255)"/>
       <stop offset="100%" stop-color="rgb(255,85,153)"/>
     </linearGradient>
     <linearGradient id="22438" x1="7.0459352" y1="25.656425" x2="115.63706" y2="104.41182" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="rgb(0,102,255)"/>
+      <stop offset="100%" stop-color="rgb(255,85,153)"/>
+    </linearGradient>
+    <linearGradient id="39655" x1="7.0459" y1="25.6564" x2="115.637" y2="104.4118" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="rgb(0,102,255)"/>
       <stop offset="100%" stop-color="rgb(255,85,153)"/>
     </linearGradient>
@@ -120,7 +124,25 @@
         </g>
       </g>
     </g>
-    <g id="g5-6" transform="translate(-19.927, -38.5609)">
+    <g transform="translate(20.8347, -38.21)">
+      <rect fill="#1296db" stroke="#ffffff" stroke-width="0.2646" x="62.5532" y="112.2606" width="37.9787" height="17.3138"/>
+      <text xml:space="preserve" font-size="9.8777px" x="74.423" y="124.3186" data-gn-el-type="text" style="white-space:pre"><tspan fill="#ffffff" stroke="#ffffff" stroke-width="0.2645" font-family="Arial"> </tspan><tspan x="74.423" y="124.3185">&#x200B;</tspan><tspan fill="#ffffff" stroke="#ffffff" stroke-width="0.2645" font-family="Arial">C++ </tspan></text>
+      <g fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.4141" transform="translate(64.0603, 116.4289)scale(0.071, 0.071)">
+        <path fill="url(#39655)" d="M116.168,34.754C116.168,19.7512,103.988,7.571,88.985,7.571L33.698,7.571C18.695,7.571,6.515,19.7512,6.515,34.754L6.515,89.12C6.515,104.123,18.695,116.303,33.698,116.303L88.985,116.303C103.988,116.303,116.168,104.123,116.168,89.12L116.168,34.754z"/>
+        <rect fill="#ffffff" stroke-width="1.1699" x="7.27" y="32.9423" width="48.944" height="6.5698"/>
+        <path fill="#ffffff" stroke-width="1.2062" d="M62.912,36.3909L47.639,49.8614L47.778,22.593L62.912,36.3909z"/>
+        <rect fill="#ffffff" stroke-width="1.201" x="86.3379" y="79.5119" width="22.0478" height="6.9237"/>
+        <rect fill="#ffffff" stroke-width="1.3465" x="71.2172" y="10.716" width="6.6536" height="103.7091"/>
+        <path fill="#ffffff" stroke-width="1.2062" d="M115.5063,83.1375L100.2333,96.608L100.3723,69.3396L115.5063,83.1375z"/>
+        <rect fill="#ffcc00" x="62.914" y="30.672" width="23.26" height="62.041"/>
+        <rect fill="#ffffff" stroke="#ffffff" stroke-width="0.8603" x="15.6813" y="83.641" width="33.9425" height="22.4389"/>
+        <g transform="translate(0.6594, 0.6594)">
+          <rect fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-linejoin="round" stroke-miterlimit="1.4141" x="36.2007" y="70.0478" width="5.8403" height="11.5036"/>
+          <rect fill="#ffffff" stroke="#ffffff" x="21.9453" y="70.0478" width="5.8403" height="11.5036"/>
+        </g>
+      </g>
+    </g>
+    <g id="g5-6" transform="translate(20.9251, -38.5609)">
       <rect id="rect3-4-5" fill="none" stroke="#808080" stroke-width="0.265" stroke-dasharray="1.59 1.59" x="103.2914" y="112.6115" width="37.9787" height="17.3138"/>
       <text xml:space="preserve" x="116.9021" y="124.3402" data-gn-el-type="text" style="white-space:pre"><tspan fill="#808080" stroke="#ffffff" stroke-width="0.2645" font-family="Arial" font-size="9.8777px"> </tspan><tspan x="116.902" y="124.3402" font-size="9.8777px">&#x200B;</tspan><tspan id="tspan3-8-0" fill="#808080" stroke="#ffffff" stroke-width="0.2646" font-family="Arial" font-size="9.8778px">...</tspan></text>
       <g id="g2-4" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.4142" transform="translate(104.6667, 116.7598)scale(0.071, 0.071)">
@@ -139,12 +161,12 @@
       </g>
     </g>
   </g>
-  <g transform="translate(150.8848, 93.2985)scale(0.4, 0.4)translate(-136.972, -93.9363)">
+  <g transform="translate(150.8848, 93.2985)scale(0.4, 0.4)translate(-136.972, -93.9363)" style="display:none">
     <g transform="translate(132.0319, 80.7505)translate(-104.1031, -114.2227)">
       <path fill="#999999" stroke="#ffffff" stroke-width="0.2645" transform="translate(-10.7594, -0.5548)rotate(0.8279098154493371)" d="M146.7813,123.6802L134.9079,133.8957L96.58,134.5188L108.995,124.2715L146.7813,123.6802z"/>
       <text xml:space="preserve" font-size="9.8777px" transform="translate(-4.5088, 4.2963)" x="115.6551" y="124.3402" data-gn-el-type="text" style="white-space:pre"><tspan fill="#ff5599" stroke="#ff5599" stroke-width="0.2645" font-family="Arial" font-style="italic"> </tspan><tspan x="115.6551" y="124.3402">&#x200B;</tspan><tspan fill="#ff5599" stroke="#ff5599" stroke-width="0.2645" font-family="Arial" font-style="italic">C++ </tspan></text>
       <g fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.4141" transform="translate(100.3244, 120.7561)scale(0.071, 0.071)">
-        <path fill="url(#23695)" d="M116.168,34.754C116.168,19.751,103.9879,7.5709,88.985,7.5709L33.698,7.5709C18.695,7.5709,6.515,19.7511,6.515,34.754L6.515,89.12C6.515,104.123,18.695,116.303,33.698,116.303L88.985,116.303C103.988,116.303,116.168,104.1229,116.168,89.12L116.168,34.754z"/>
+        <path fill="url(#23751)" d="M116.168,34.754C116.168,19.751,103.9879,7.5709,88.985,7.5709L33.698,7.5709C18.695,7.5709,6.515,19.7511,6.515,34.754L6.515,89.12C6.515,104.123,18.695,116.303,33.698,116.303L88.985,116.303C103.988,116.303,116.168,104.1229,116.168,89.12L116.168,34.754z"/>
         <rect fill="#ffffff" stroke-width="1.1699" x="7.27" y="32.9422" width="48.944" height="6.5697"/>
         <path fill="#ffffff" stroke-width="1.2062" d="M62.912,36.3908L47.639,49.8613L47.778,22.593L62.912,36.3908z"/>
         <rect fill="#ffffff" stroke-width="1.201" x="86.3379" y="79.5119" width="22.0478" height="6.9237"/>
