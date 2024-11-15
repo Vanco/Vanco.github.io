@@ -41,9 +41,15 @@
     </div>
     <section>
         <div class="danger box tip-box">
+            <p><strong>Note:</strong> The SequenceDiagram C/C++ is compatible with CLion, but it is incompatible with CLion Nova.
+                the reason, SequenceDiagram C/C++ is depended on `CLion legacy engine`, not work with the new `ReSharper C++ / Rider C++ language engine`.</p>
+        </div>
+        <p></p>
+        <div class="danger box tip-box">
             <p><strong>Note:</strong> The SequenceDiagram plugin relies heavily on the UAST API.
                 Due to UAST API limitations, the following features are not supported.</p>
         </div>
+        <p></p>
         <div class="warning box tip-box">
             <p><strong>Note:</strong> The SequenceDiagram plugin use `apache bakit` to transcode SVG --> JPG, PNG, TIF.
                 When your diagram is huge, the transcoder might fail with OutOfMemoryError. To avoid this problem,
